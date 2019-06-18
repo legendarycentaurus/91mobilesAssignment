@@ -13,13 +13,13 @@
 				<div class="form-group">
 					<label  class="col-sm-2 control-label">Email</label>
 					<div class="col-sm-10">
-						<input type="email" class="form-control"  ng-model="emailId" name="emailId" placeholder="Email">
+						<input type="email" class="form-control"  ng-model="emailId" required ng-required name="emailId" placeholder="Email">
 					</div>
 				</div>
 				<div class="form-group">
 					<label  class="col-sm-2 control-label">Password</label>
 					<div class="col-sm-10">
-						<input type="password" class="form-control" ng-model="password" name="password" placeholder="Password">
+						<input type="password" class="form-control" ng-model="password" required ng-required name="password" placeholder="Password">
 					</div>
 				</div>
 				<div class="form-group">

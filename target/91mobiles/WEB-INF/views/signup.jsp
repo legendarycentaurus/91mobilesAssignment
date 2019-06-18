@@ -14,25 +14,25 @@
 				<div class="form-group">
 					<label  class="col-sm-2 control-label">Email</label>
 					<div class="col-sm-10">
-						<input type="email" class="form-control" ng-model="emailId" name="emailId" placeholder="Email">
+						<input type="email" class="form-control" ng-model="emailId" name="emailId" placeholder="Email" required ng-required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label  class="col-sm-2 control-label">First Name</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" ng-model="firstName" name="firstName" placeholder="First Name">
+						<input type="text" class="form-control" ng-model="firstName" name="firstName" placeholder="First Name" required ng-required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label  class="col-sm-2 control-label">Last Name</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" ng-model="lastName" name="lastName" placeholder="Last Name">
+						<input type="text" class="form-control" ng-model="lastName" name="lastName" placeholder="Last Name" required ng-required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label  class="col-sm-2 control-label">Password</label>
 					<div class="col-sm-10">
-						<input type="password" class="form-control" ng-model="password" name="password" placeholder="Password">
+						<input type="password" class="form-control" ng-model="password" name="password" placeholder="Password" required ng-required>
 					</div>
 				</div>
 				
@@ -44,7 +44,7 @@
 			</form>
 
 		</div>
-
+<div ng-show="errCode" class="text-center" style="color:red;">{{errMsg}}</div>
 	</div>
 	
 

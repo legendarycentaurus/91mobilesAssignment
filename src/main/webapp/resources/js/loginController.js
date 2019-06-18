@@ -19,7 +19,7 @@ $scope.submit = function(url){
 			$scope.errCode=response.data.errCd;
 			$scope.errMsg=response.data.errMsg;
 			if($scope.errCode==0){
-				$window.location.href ="/91mobiles/afterLogin";
+				location.replace(window.location.origin+"/91mobiles/afterLogin");
 			}
 			return true;
 		}, function myError(response){

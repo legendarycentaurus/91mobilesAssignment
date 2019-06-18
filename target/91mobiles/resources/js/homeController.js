@@ -1,6 +1,5 @@
 app.controller("homeCtrl", function($scope,$http) {
 
-	
 	$scope.getProducts=function(){
 		$http( {
 			method : 'POST',
@@ -28,29 +27,33 @@ app.controller("homeCtrl", function($scope,$http) {
 		
 	};
 	$scope.getProducts();
-$scope.submit = function(url){
-	 var emailId =$scope.emailId;
-	 var password =$scope.password;
-		debugger;
+
+	$scope.productDetails=function(product,url){
+		console.log(product);
 		$http( {
 			method : 'POST',
 			url : url,
-			params: {"emailId":emailId, "password":password},
+			params: {"itemId":product.id, "itemdesc":product.description,
+				"productId":product.product_id, "productCategory":product.productCategory,
+				"price":product.price},
 			headers : {
 				'Content-Type' : 'application/json'
 			}
 		}).then(function mySuccess(response){
 			debugger;
-			var errCd = angular.fromJson(response.data).errCd;
-			var errMsg = angular.fromJson(response.data).errMsg;
-			var reqId = angular.fromJson(response.data).reqId;
-			
-			
+			$scope.errCode=response.data.errCd;
+			$scope.errMsg=response.data.errMsg;
+			if($scope.errCode==0){
+				alert($scope.errMsg);
+			}
+			if($scope.errCode==1){
+				alert($scope.errMsg);
+			}
 			return true;
 		}, function myError(response){
 			alert("Error");
 			return false;
-		});	
-  };
+		});
+	}
 
 });

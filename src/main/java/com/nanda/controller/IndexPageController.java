@@ -36,14 +36,15 @@ public class IndexPageController {
 	}
 	
 	@RequestMapping("/logout")
-	public ModelAndView logout(HttpServletRequest httpreq,HttpServletResponse httpresp) {
+	public @ResponseBody Map<String,Integer> logout(HttpServletRequest httpreq,HttpServletResponse httpresp) {
 		System.out.println("after login in controller");
-		ModelAndView mv= new ModelAndView("/index");
+		Map<String, Integer> map=new HashMap<String, Integer>();
 		System.out.println(httpreq.getSession().getId());
 		httpreq.getSession().removeAttribute("emailId");
 		httpreq.getSession().invalidate();
 		System.out.println("SessionInvalidated");
-		return mv;
+		map.put("errCd", 0);
+		return map;
 	}
 	
 	@RequestMapping("/home")

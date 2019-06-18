@@ -1,12 +1,20 @@
 package com.nanda.model;
 
 public class Cart {
+private int cartId;
 private String emailId;
 private int productId;
 private String productCategory;
 private int itemId;
 private String itemdesc;
 private int price;
+
+public int getCartId() {
+	return cartId;
+}
+public void setCartId(int cartId) {
+	this.cartId = cartId;
+}
 public String getEmailId() {
 	return emailId;
 }

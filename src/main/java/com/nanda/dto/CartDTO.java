@@ -6,5 +6,6 @@ import com.nanda.model.Cart;
 public interface CartDTO {
 public boolean addProduct(Cart cart);
 public List<Cart> listCart(String emailId);
+public boolean checkOutProduct(String emailId);
 
 }

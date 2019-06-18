@@ -3,7 +3,8 @@ $scope.emailId;
 $scope.password;
 $scope.firstName;
 $scope.lastName;
-
+$scope.errCode;
+$scope.errMsg;
 $scope.submit = function(url){
 	debugger;
 	 var emailId =$scope.emailId;
@@ -20,7 +21,14 @@ $scope.submit = function(url){
 			}
 		}).then(function mySuccess(response){
 			debugger;
-			
+			$scope.errCode=response.data.errCd;
+			$scope.errMsg=response.data.errMsg;
+			if($scope.errCode>1){
+				$scope.emailId="";
+				$scope.password="";
+				$scope.firstName="";
+				$scope.lastName="";
+			}
 			return true;
 		}, function myError(response){
 			alert("Error");

@@ -11,14 +11,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.nanda.dto.LoginDTO;
-import com.nanda.utils.MailApi;
-//import com.nanda.utils.MailMail;
 @Repository
 public class LoginDAO implements LoginDTO {
 	@Autowired
 	private DataSource dataSource;
-	@Autowired
-	private MailApi m;
+/*	@Autowired
+	private MailApi m;*/
 	@Autowired
 	//private MailMail mailService;
 	public String verifyLoginQuery(){

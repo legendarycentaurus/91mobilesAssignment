@@ -17,7 +17,7 @@
       <div class="caption">
         <h5>{{product.description}}<span class="right">Price:{{product.price | currency }}</span></h5>
         <p></p>
-        <p><a  class="btn btn-primary form-control input-lg"  ng-click="productDetails(product)" role="button">Add To Cart</a> </p>
+        <p><a  class="btn btn-primary form-control input-lg"  ng-click="productDetails(product,'${pageContext.request.contextPath}/afterLogin/addProduct')" role="button">Add To Cart</a> </p>
       </div>
     </div>
   </div>
@@ -31,7 +31,7 @@
       <div class="caption">
         <h5>{{product.description}}<span class="right">Price:{{product.price | currency }}</span></h5>
         <p></p>
-        <p><a href="#" class="btn btn-primary form-control input-lg" role="button">Add To Cart</a> </p>
+        <p><a  class="btn btn-primary form-control input-lg" ng-click="productDetails(product,'${pageContext.request.contextPath}/afterLogin/addProduct')" role="button">Add To Cart</a> </p>
       </div>
     </div>
   </div>

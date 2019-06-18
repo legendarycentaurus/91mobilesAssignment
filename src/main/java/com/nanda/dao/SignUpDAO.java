@@ -47,7 +47,4 @@ public String insertQuery(){
 		}
 		return rowInserted>0?true:false;
 	}
-
-	
-
 }
